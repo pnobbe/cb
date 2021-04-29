@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Insurance.Core\Insurance.Core.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostClean" AfterTargets="Clean">
+    <Exec Command="rm -f .\bin -r" />
+    <Exec Command="rm -f .\obj -r" />
+  </Target>
+</Project>
